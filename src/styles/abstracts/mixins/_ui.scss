@@ -1,0 +1,37 @@
+@use "../colors" as *;
+@use "../variables" as *;
+@use "../font" as *;
+
+@use "./layout" as *;
+
+@mixin border($color: $clr-main-bg-400) {
+  border: $color solid 1px;
+}
+
+@mixin field-container {
+  width: 100%;
+  @include flex($align: flex-start, $direction: column, $gap: $var-spacing-3xs);
+  margin-top: $var-spacing-xl;
+
+  > :nth-child(1) {
+    font-size: $font-s;
+  }
+
+  > :nth-child(2) {
+    width: 100%;
+    color: $clr-grayscale-800;
+    padding: $var-spacing-s $var-spacing-xs $var-spacing-s $var-spacing-m;
+    height: 42px;
+    background-color: $clr-main-bg-300;
+    @include border($color: $clr-main-bg-600);
+    border-radius: $var-rounded-m;
+
+    &:focus {
+      border-color: $clr-main-light-blue-500;
+    }
+
+    &:disabled {
+      border-color: $clr-grayscale-200;
+    }
+  }
+}

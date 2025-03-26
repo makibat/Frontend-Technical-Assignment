@@ -1,0 +1,84 @@
+:root {
+  --clr-main-dark-blue-100: #1b009f;
+  --clr-main-dark-blue-200: #2200c7;
+  --clr-main-dark-blue-300: #2500d9;
+  --clr-main-dark-blue-400: #2901ed;
+  --clr-main-dark-blue-500: #2731f0;
+  --clr-main-dark-blue-600: #3d46f2;
+  --clr-main-dark-blue-700: #525af3;
+  --clr-main-dark-blue-800: #686ff5;
+
+  --clr-main-light-blue-100: #0279f9;
+  --clr-main-light-blue-200: #1b87fa;
+  --clr-main-light-blue-300: #3594fa;
+  --clr-main-light-blue-400: #35a5fa;
+  --clr-main-light-blue-500: #3db8ff;
+  --clr-main-light-blue-600: #32c5ff;
+  --clr-main-light-blue-700: #4cd2ff;
+  --clr-main-light-blue-800: #73daff;
+
+  --clr-main-bg-100: #12101c;
+  --clr-main-bg-200: #19182b;
+  --clr-main-bg-300: #1d1c34;
+  --clr-main-bg-400: #242545;
+  --clr-main-bg-500: #2d2f55;
+  --clr-main-bg-600: #373e65;
+  --clr-main-bg-700: #444c7d;
+  --clr-main-bg-800: #545d93;
+
+  --clr-grayscale-100: #282847;
+  --clr-grayscale-200: #303051;
+  --clr-grayscale-300: #3e3e5f;
+  --clr-grayscale-400: #4a4a6e;
+  --clr-grayscale-500: #626283;
+  --clr-grayscale-600: #82829c;
+  --clr-grayscale-700: #a5a5b8;
+  --clr-grayscale-800: #ffffff;
+
+  --clr-tiles-gem-default: #aaff00;
+  --clr-tiles-gem-revealed: #53741a;
+  --clr-tiles-gem-bg: #061c04;
+
+  --clr-tiles-mine-default: #ff2424;
+  --clr-tiles-mine-revealed: #751d28;
+  --clr-tiles-mine-bg: #220303;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+body {
+  color: $clr-grayscale-800;
+  background-color: $clr-main-bg-100;
+  font-size: $font-base;
+  font-weight: $font-w-normal;
+}
+
+ul {
+  list-style: none;
+}
+
+svg > path {
+  fill: $clr-grayscale-800;
+}
+
+button,
+a,
+input {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-family: inherit;
+}

@@ -1,0 +1,26 @@
+.button {
+  width: 100%;
+  min-width: 200px;
+  height: 46px;
+  background-color: $clr-main-dark-blue-200;
+  @include border($clr-main-light-blue-500);
+  border-radius: $var-rounded-m;
+  font-weight: $font-w-light;
+
+  &:not(:disabled, :active) {
+    box-shadow:
+      inset 0 0 25px $clr-main-dark-blue-600,
+      0 0 12px #1dabff40;
+  }
+
+  &:active {
+    border-color: $clr-main-dark-blue-200;
+  }
+
+  &:disabled {
+    color: $clr-grayscale-500;
+    background-color: $clr-grayscale-200;
+    border: none;
+    cursor: default;
+  }
+}

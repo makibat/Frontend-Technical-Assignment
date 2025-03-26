@@ -1,0 +1,34 @@
+.base_wrapper {
+  height: 47px;
+  width: 100%;
+  @include border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  @include flex;
+}
+
+.base_container {
+  @include flex($justify: space-between);
+  width: 600px;
+  margin: 0 $var-spacing-s;
+}
+
+.button {
+  background-color: transparent;
+
+  > svg {
+    transform: rotate(270deg);
+  }
+}
+
+.balance {
+  font-size: $font-s;
+  color: $clr-grayscale-700;
+  line-height: 16px;
+  opacity: 0.8;
+}
+
+.balance_wrapper {
+  @include flex($align: flex-end, $direction: column);
+}

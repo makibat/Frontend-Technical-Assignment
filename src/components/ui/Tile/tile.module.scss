@@ -1,0 +1,39 @@
+.base {
+  aspect-ratio: 1 / 1;
+  border-radius: $var-rounded-l;
+  background-color: $clr-main-bg-400;
+  @include border($clr-main-bg-600);
+  border-top: 0;
+  border-left: 0;
+  position: relative;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.gem {
+  background-color: $clr-tiles-gem-bg;
+  @include border($clr-tiles-gem-default);
+}
+
+.mine {
+  background-color: $clr-tiles-mine-bg;
+  @include border($clr-tiles-mine-default);
+}
+
+.uncovered {
+  background-color: $clr-main-bg-100;
+
+  > svg {
+    opacity: 0.4;
+  }
+}
+
+.gem.uncovered {
+  border-color: $clr-tiles-gem-revealed;
+}
+
+.mine.uncovered {
+  border-color: $clr-tiles-mine-revealed;
+}

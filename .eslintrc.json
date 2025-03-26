@@ -1,3 +1,24 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "rules": {
+    "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "object-curly-newline": "off",
+    "no-plusplus": "off",
+    "max-len": "off",
+    "no-nested-ternary": "off",
+    "linebreak-style": ["error", "windows"]
+  },
+  "ignorePatterns": ["node_modules/*"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }

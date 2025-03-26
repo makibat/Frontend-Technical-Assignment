@@ -1,0 +1,14 @@
+.wrapper {
+  width: 100%;
+  height: 100dvh;
+  @include flex($align: flex-start);
+}
+
+.container {
+  width: 600px;
+  height: fit-content;
+  margin: $var-spacing-l $var-spacing-s;
+  padding: $var-spacing-s;
+  @include border;
+  border-radius: $var-rounded-xl;
+}
