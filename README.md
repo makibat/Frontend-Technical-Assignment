@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Frontend-Technical-Assignment 
 
-## Getting Started
+A Next.js application for a streamlined version of the popular Mines game.
 
-First, run the development server:
+## 💻 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  - Framework: <code>Next.js (App Router)</code>
+    
+  - State Management: <code>React Context API</code>
+
+  - Styling: <code>SCSS</code>
+    
+  - Deployment: <code>Vercel</code>
+
+## ⚙️ Getting Started
+### Prerequisites
+
+    Node.js v18+
+
+    npm
+    
+### Installation
+    git clone https://github.com/makibat/Frontend-Technical-Assignment.git
+    cd Frontend-Technical-Assignment
+    npm install
+    
+### Environment Variables
+
+Create <code>.env.local</code>
+```sh
+NEXT_PUBLIC_BASE_URL=https://wallet-demo-435v2.ondigitalocean.app
+NEXT_PUBLIC_API_KEY=TxDONKnVZslnzVq2kZHoxQt9715WTZHyYVcbij0nQQTKHKIFVYmRGZtOWUP8SnEp
+NEXT_PUBLIC_CUSTOMER_ID=b3d7fe33-054d-4fdc-a98e-4461deb24b08
+NEXT_PUBLIC_TOKEN=40d80626-e63d-44fa-a801-595cc4624ed3
+NEXT_PUBLIC_SESSION_ID=908734530-gh53-4535-tm51-fd1486nr352
 ```
+### Run Locally
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 📚 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+src
+|
++-- api/                  # API client and endpoint definitions.
+|
++-- app/                  # Next.js App Router entry point.
+|   |                     
+|   +-- (routes)/         # Application routes (page.tsx files).
+|   |    +-- components/  # Route-specific components.
+|   |    +-- config/      # Route-specific configurations.
+|   |   
+|   +-- layout.tsx        # Root layout component.
+|
++-- components/           # Shared UI components used across the application.
+|   +-- ui/               # Primitive components (buttons, inputs).
+|   +-- layout/           # Structural components (grids, containers).
+|   +-- navbar/           # Main navigation component.
+|
++-- config/               # Global configurations, exported env variables etc.
+|
++-- providers/            # Context providers.
+|
++-- styles/               # Global styling resources.
+|
++-- types/                # Shared types used across the application.
+|
++-- utils/                # Shared utility functions and helpers.
+```
