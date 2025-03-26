@@ -1,4 +1,4 @@
-import { GameConfig } from "@/components/types";
+import { GameConfig } from "@/types";
 
 export const config: GameConfig = {
   grid: 5,

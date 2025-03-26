@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "vercel --prod",
     "start": "next start",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npx prettier . --write",
@@ -16,7 +17,8 @@
     "ky": "^1.7.5",
     "next": "14.2.25",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "vercel": "^41.4.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

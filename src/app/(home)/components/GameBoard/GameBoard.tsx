@@ -2,7 +2,7 @@
 
 import React, { useImperativeHandle, useState } from "react";
 
-import { GameConfig, TileStatus, TileType } from "@/components/types";
+import { GameConfig, TileStatus, TileType } from "@/types";
 import { Tile } from "@/components/ui";
 import { Popup, PopupProps } from "./Popup";
 
@@ -122,9 +122,13 @@ export const GameBoard = React.forwardRef(
      * @desc Reinitializes tiles and clears game over state.
      */
     function resetGame() {
-      setTiles((prevTiles) => prevTiles.map((tile) => (tile.status !== TileStatus.Activated
-        ? { ...tile, status: TileStatus.Uncovered }
-        : tile)));
+      setTiles((prevTiles) =>
+        prevTiles.map((tile) =>
+          tile.status !== TileStatus.Activated
+            ? { ...tile, status: TileStatus.Uncovered }
+            : tile,
+        ),
+      );
 
       setTimeout(() => {
         setTiles(initalizeNewGame);
@@ -145,7 +149,11 @@ export const GameBoard = React.forwardRef(
      */
     function updateTile(id: number) {
       // Update activated Tile status.
-      setTiles((prevTiles) => prevTiles.map((tile) => (tile.id === id ? { ...tile, status: TileStatus.Activated } : tile)));
+      setTiles((prevTiles) =>
+        prevTiles.map((tile) =>
+          tile.id === id ? { ...tile, status: TileStatus.Activated } : tile,
+        ),
+      );
 
       // Update Tile count.
       if (tiles.find((tile) => tile.id === id)?.type === TileType.Mine) {

@@ -2,7 +2,7 @@
 
 import classNames from "classnames";
 
-import { TileStatus, TileType } from "@/components/types";
+import { TileStatus, TileType } from "@/types";
 import Gem from "@public/assets/Gem.png";
 import Mine from "@public/assets/Mine.png";
 import { TileImage } from "./TileImage";
@@ -36,8 +36,8 @@ export function Tile({ status, type, disabled, onClick }: TileProps) {
       disabled={disabled}
       onClick={onClick}
     >
-      {!isActivable
-        && (isGem ? <TileImage src={Gem} /> : <TileImage src={Mine} />)}
+      {!isActivable &&
+        (isGem ? <TileImage src={Gem} /> : <TileImage src={Mine} />)}
     </button>
   );
 }
